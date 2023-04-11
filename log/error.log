@@ -1,0 +1,34 @@
+[2023-04-04T13:55:17.893] [ERROR] default - Error: listen EADDRINUSE: address already in use :::8080
+    at Server.setupListenHandle [as _listen2] (node:net:1372:16)
+    at listenInCluster (node:net:1420:12)
+    at Server.listen (node:net:1508:7)
+    at Function.listen (C:\Users\Koakuma\Documents\CoderHouse\backend\desafio final tercera entrega\node_modules\express\lib\application.js:618:24)
+    at file:///C:/Users/Koakuma/Documents/CoderHouse/backend/desafio%20final%20tercera%20entrega/src/server.js:81:20
+    at ModuleJob.run (node:internal/modules/esm/module_job:198:25)
+    at async Promise.all (index 0)
+    at async ESMLoader.import (node:internal/modules/esm/loader:385:24)
+    at async loadESM (node:internal/process/esm_loader:88:5)
+    at async handleMainPromise (node:internal/modules/run_main:61:12) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 8080
+}
+[2023-04-09T13:07:41.115] [ERROR] default - MongoServerError: E11000 duplicate key error collection: DBterceraEntrega.usuarios index: username_1 dup key: { username: "Alex" }
+    at C:\Users\Koakuma\Documents\CoderHouse\backend\3entregafinal\node_modules\mongoose\node_modules\mongodb\lib\operations\insert.js:53:33
+    at C:\Users\Koakuma\Documents\CoderHouse\backend\3entregafinal\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection_pool.js:333:25
+    at C:\Users\Koakuma\Documents\CoderHouse\backend\3entregafinal\node_modules\mongoose\node_modules\mongodb\lib\sdam\server.js:210:17
+    at handleOperationResult (C:\Users\Koakuma\Documents\CoderHouse\backend\3entregafinal\node_modules\mongoose\node_modules\mongodb\lib\sdam\server.js:326:20)
+    at Connection.onMessage (C:\Users\Koakuma\Documents\CoderHouse\backend\3entregafinal\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection.js:242:9)
+    at MessageStream.<anonymous> (C:\Users\Koakuma\Documents\CoderHouse\backend\3entregafinal\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection.js:61:60)
+    at MessageStream.emit (node:events:527:28)
+    at processIncomingData (C:\Users\Koakuma\Documents\CoderHouse\backend\3entregafinal\node_modules\mongoose\node_modules\mongodb\lib\cmap\message_stream.js:125:16)
+    at MessageStream._write (C:\Users\Koakuma\Documents\CoderHouse\backend\3entregafinal\node_modules\mongoose\node_modules\mongodb\lib\cmap\message_stream.js:33:9)
+    at writeOrBuffer (node:internal/streams/writable:389:12) {
+  index: 0,
+  code: 11000,
+  keyPattern: { username: 1 },
+  keyValue: { username: 'Alex' },
+  [Symbol(errorLabels)]: Set(0) {}
+}

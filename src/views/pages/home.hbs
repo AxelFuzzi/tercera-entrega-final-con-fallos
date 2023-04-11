@@ -1,0 +1,48 @@
+<h2>Hi! You're on the homepage.</h2>
+    {{#if status}}
+        <h4>You're logged in, you rock 😎</h4>
+
+    <section id='insert-and-read'>
+      <div class='container mt-2'>
+        <div class='jumbotron'>
+          <br />
+          <hr>
+
+          <!-- Acá se inserta la lista de productos en caso de que existan -->
+          <div>
+            {{#if productos}}
+            <h1>Últimos productos agregados</h1>
+            {{#each productos}}
+            
+            <div class ='table-responsive'>
+              <table class='table table-dark'>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Precio</th>
+                  <th>Foto</th>
+                </tr>
+                <tr>
+                  <td>{{this.title}}</td>
+                  <td>{{this.price}}</td>
+                  <td>
+                    <img
+                    width='50'
+                    src={{this.image}}
+                    alt='Image not found'/>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            {{/each}}
+            {{else}}
+            <h1>No hay productos por mostrar</h1>
+            {{/if}}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {{else}}
+       <h4>Oops! Looks like you're not logged in 😲</h4>
+    {{/if}}
+
